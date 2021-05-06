@@ -1,0 +1,68 @@
+$green: #5FAD56;
+$yellow: #F2C14E;
+$black: #12130F;
+$emerald: #4D9078;
+$blue: #C4D7F2;
+$red: #E71D36;
+
+$primary-ff: 'Zen Dots', cursive;
+$secondary-ff: 'Open Sans', sans-serif;
+
+body {
+  font-family: $primary-ff;
+  color: $black;
+}
+
+h1.title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+tr.even {
+  background: lighten($black, 80%);
+}
+
+td.negative {
+  background: $red;
+  color: lighten($red, 25%);
+}
+
+td.positive {
+  background: $green;
+  color: darken($green, 25%);
+}
+
+#progressbar {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+a.refresh {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  background: $yellow;
+  color: $black;
+
+  &:hover {
+    background: lighten($yellow, 10%);
+    cursor: pointer;
+  }
+}
+
+// Stock table.
+table {
+  text-align: center;
+}
+
+th {
+  padding: 0 20px;
+  font-family: $secondary-ff;
+  text-transform: uppercase;
+  border-bottom: 1px solid gray;
+}

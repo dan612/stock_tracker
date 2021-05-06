@@ -1,0 +1,47 @@
+body {
+  font-family: "Zen Dots", cursive;
+  color: #12130F; }
+
+h1.title {
+  display: inline-block;
+  vertical-align: middle; }
+
+tr.even {
+  background: #dfe1d9; }
+
+td.negative {
+  background: #E71D36;
+  color: #f3909d; }
+
+td.positive {
+  background: #5FAD56;
+  color: #30592b; }
+
+#progressbar {
+  border: 1px solid #ccc;
+  border-radius: 5px; }
+
+.hidden {
+  display: none; }
+
+a.refresh {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  background: #F2C14E;
+  color: #12130F; }
+  a.refresh:hover {
+    background: #f5d27e;
+    cursor: pointer; }
+
+table {
+  text-align: center; }
+
+th {
+  padding: 0 20px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  border-bottom: 1px solid gray; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,45 @@
+{% include 'sub-templates/_link.html.twig' with {
+  text: 'REFRESH DATA',
+  url: 'https://www.espn.com',
+  class: 'refresh',
+  customid: 'update'
+} %}
+{% include 'sub-templates/_progress-bar.html.twig' %}
+<table>
+  <tr>
+    <th>Ticker</th>
+    <th>Last Price</th>
+    <th>Current Price</th>
+    <th>Change</th>
+    <th>Price Target</th>
+  </tr>
+  {% for ticker,data in port_data %}
+  {% if loop.index is odd %}
+    {% set rowclass = 'odd' %}
+  {% else %}
+    {% set rowclass = 'even' %}
+  {% endif %}
+  <tr class={{ rowclass }}>
+    <td>
+      <p class="ticker">{{ ticker }}</p>
+    </td>
+    <td>
+      <p>{{ data.last }}</p>
+    </td>
+    <td>
+      <p>{{ data.current }}</p>
+    </td>
+    {% if data.change < 0 %}
+      {% set trend = 'negative' %}
+    {% else %}
+      {% set trend = 'positive' %}
+    {% endif %}
+    <td class={{ trend }}>
+      <p>{{ data.change }}%</p>
+    </td>
+    <td>
+      <p>{{ data.price_target|replace({'$': ''}) }}</p>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
